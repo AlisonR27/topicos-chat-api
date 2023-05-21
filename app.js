@@ -7,6 +7,7 @@ const fs = require('fs')
 var app = express()
 var router = express.Router()
 var server = require('http').Server(app) 
+app.use(cors());
 
 var socketIO = require('socket.io')(server, {
   cors: {
@@ -65,7 +66,6 @@ rabbitMQHandler((connection) => {
   })
 })
 
-app.use(cors());
 // app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 // app.use(function (req, res, next) {
