@@ -12,7 +12,7 @@ app.use(cors());
 var socketIO = require('socket.io')(server, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST"]
+    methods: ["GET", "POST", "OPTIONS"]
   }
 })
 
