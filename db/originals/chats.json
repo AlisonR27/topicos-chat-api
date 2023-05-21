@@ -4,8 +4,29 @@
     "name": "Grande Salão",
     "history": [
       {
-        "by": "alisonranier@gmail.com",
-        "content": "Hello World"
+        "by": "user@email.com",
+        "content": "Mensagem inicial",
+        "datetime": "2023-05-21T02:24:26.422Z"
+      }
+    ]
+  }, {
+    "id": 2,
+    "name": "Sala do templo",
+    "history": [
+      {
+        "by": "user@email.com",
+        "content": "Mensagem inicial",
+        "datetime": "2023-05-21T02:24:26.422Z"
+      }
+    ]
+  }, {
+    "id": 3,
+    "name": "Casa do Kame",
+    "history": [
+      {
+        "by": "user@email.com",
+        "content": "Hello World",
+        "datetime": "2023-05-21T02:24:26.422Z"
       }
     ]
   }
