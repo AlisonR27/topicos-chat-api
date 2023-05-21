@@ -221,8 +221,8 @@ router.route('/chats/:id/message').post((req,res) => {
   }
 })
 
-server.listen(process.env.API_PORT, '0.0.0.0',
+server.listen(process.env.PORT, '0.0.0.0',
   () => {
-    console.log('Running at at localhost:5555')
+    console.log(`Running at at localhost:5555`)
   }
 )
