@@ -1,6 +1,7 @@
 var express = require('express') 
 var bodyParser = require('body-parser')
 var rabbitMQHandler = require('./connection')
+var cors = require('cors');
 
 const fs = require('fs')
 var app = express()
@@ -64,7 +65,7 @@ rabbitMQHandler((connection) => {
   })
 })
 
-
+app.use(cors());
 // app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
