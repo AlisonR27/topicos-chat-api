@@ -2,10 +2,10 @@ var amqp = require('amqplib/callback_api')
 
 
 module.exports = (callback) => {
-  const {AMQP_HOST, AMQP_PORT, AMQP_ROUTE } = process.env;
-  amqp.connect(`${AMQP_HOST}:${AMQP_PORT}`,
+  const {AMQP_HOST } = process.env;
+  amqp.connect(`${AMQP_HOST}?heartbeat=60`,
     {
-      timeout: 2000
+      timeout: 2000,
     },
     (error, conection) => {
     if (error) {
