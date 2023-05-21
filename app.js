@@ -13,7 +13,8 @@ var server = require('http').Server(app)
 var socketIO = require('socket.io')(server, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST", "OPTIONS"]
+    methods: ["GET", "POST", "OPTIONS"],
+    credentials: true
   }
 })
 
