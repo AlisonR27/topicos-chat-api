@@ -19,6 +19,8 @@ var outputSocket = socketIO.of('/msg')
 const userFile = './db/users.json'
 const chatFile = './db/chats.json'
 
+require('dotenv').config()
+
 if(!fs.existsSync(userFile)) {
   fs.writeFileSync(userFile, '[]', () => {
   });
@@ -219,7 +221,7 @@ router.route('/chats/:id/message').post((req,res) => {
   }
 })
 
-server.listen(5555, '0.0.0.0',
+server.listen(process.env.API_PORT, '0.0.0.0',
   () => {
     console.log('Running at at localhost:5555')
   }
