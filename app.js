@@ -9,6 +9,7 @@ var router = express.Router()
 var server = require('http').Server(app)
 
 // app.use(cors());
+require('dotenv').config()
 
 var socketIO = require('socket.io')(server, {
   cors: {
@@ -23,7 +24,6 @@ var outputSocket = socketIO.of('/msg')
 const userFile = './db/users.json'
 const chatFile = './db/chats.json'
 
-require('dotenv').config()
 
 if(!fs.existsSync(userFile)) {
   fs.writeFileSync(userFile, '[]', () => {
